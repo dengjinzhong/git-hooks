@@ -6,7 +6,8 @@
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint src",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "commit": "commit"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,10 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@commitlint/prompt-cli": "^17.0.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
@@ -31,8 +34,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
       "prettier --write",
-      "eslint",
-      "git add"
+      "eslint"
     ]
   }
 }

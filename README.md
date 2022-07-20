@@ -1,4 +1,4 @@
-"# git-hooks"
+# git-hooks
 
 ## [Git hooks](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90)
 Git 钩子
@@ -85,3 +85,12 @@ module.exports = {
 }
 ```
 
+## [commitlint](https://commitlint.js.org/#/)
+一款校验提交信息的工具
+
+#### 安装与使用
+1. 安装 `npm install @commitlint/cli @commitlint/config-conventional -D`
+2. 创建文件配置 `commitlint.config.js`, 并编辑内容为： `module.exports = {extends: ['@commitlint/config-conventional']}`
+3. 添加钩子脚本 `npx husky add .husky/commit-msg`, 并编辑运行脚本为： `npm commitlint --edit`
+
+#### [更多配置内容](https://github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md)
