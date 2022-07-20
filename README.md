@@ -25,4 +25,27 @@ Git 钩子
     
     npm run link
     ```
+* `git commit` 命令时会先执行 `pre-commit` 这个脚本，也就是执行 `npm run link`
 * 重复上述命令生成其他钩子脚本
+
+## [lint-staged](https://www.npmjs.com/package/lint-staged?activeTab=readme)
+对提交的代码进行检查的工具
+
+#### 安装与使用
+1. 安装 `npm install --save-dev lint-staged`
+2. 设置 `pre-commit` 钩子来运行 `lint-staged`
+3. 安装代码检查工具（ `ESLint` ）和格式化工具( `Prettier` )
+4. 配置 `lint-staged` 来运行代码检测与格式化
+5. 可以在 `package.json` 中配置，也可以新建文件 `.lintstagedrc` 进行配置
+```json
+{
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ]
+  }
+}
+```
+
