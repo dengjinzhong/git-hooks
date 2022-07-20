@@ -8,6 +8,8 @@ function HelloWorld({
     return null;
   }
 
+  //随意写一些备注
+
   let num = Math.floor(Math.random() * 1e7)
     .toString()
     .replace(/\.\d+/gi, "");
