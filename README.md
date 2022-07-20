@@ -57,5 +57,31 @@ Git 钩子
 2. 创建配置文件 `.prettierrc.json`
 3. 创建忽略文件配置 `.prettierignore`
 4. 格式化命令 `npx prettier --write .`
-5. 如何与 ESLint 一起使用，需要安装 `eslint-config-prettier` 来屏蔽一些冲突的配置，它关闭了所有不必要的或可能与Prettier冲突的ESLint规则
+5. 如果与 ESLint 一起使用，需要安装 `eslint-config-prettier` 来屏蔽一些冲突的配置，它关闭了所有不必要的或可能与Prettier冲突的ESLint规则
+
+## [ESLint](https://cn.eslint.org/)
+javascript 代码检测工具
+
+#### 安装与使用
+1. 安装 `npm install eslint --save-dev`
+2. 添加配置文件 `npx eslint --init` 也可以手动添加 `.eslintrc.js`
+3. 运行检测 `eslint yourfile.js`
+
+#### 配置
+具体配置规则可以参考官方网站
+```js
+module.exports = {
+    "env":{ "es6": true },
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "no-unused-vars": [2, { "vars": "local", "args": "after-used" }]
+    }
+}
+```
 
