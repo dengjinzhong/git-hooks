@@ -42,8 +42,7 @@ Git 钩子
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
       "prettier --write",
-      "eslint",
-      "git add"
+      "eslint"
     ]
   }
 }
@@ -91,6 +90,6 @@ module.exports = {
 #### 安装与使用
 1. 安装 `npm install @commitlint/cli @commitlint/config-conventional -D`
 2. 创建文件配置 `commitlint.config.js`, 并编辑内容为： `module.exports = {extends: ['@commitlint/config-conventional']}`
-3. 添加钩子脚本 `npx husky add .husky/commit-msg`, 并编辑运行脚本为： `npm commitlint --edit`
+3. 添加钩子脚本 `npx husky add .husky/commit-msg`, 并编辑运行脚本为： `npx commitlint --edit`
 
 #### [更多配置内容](https://github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md)
