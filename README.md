@@ -49,3 +49,13 @@ Git 钩子
 }
 ```
 
+## [Prettier](https://prettier.io/)
+一款代码格式化工具
+
+#### 安装与使用
+1. 安装 `npm install --save-dev --save-exact prettier`
+2. 创建配置文件 `.prettierrc.json`
+3. 创建忽略文件配置 `.prettierignore`
+4. 格式化命令 `npx prettier --write .`
+5. 如何与 ESLint 一起使用，需要安装 `eslint-config-prettier` 来屏蔽一些冲突的配置，它关闭了所有不必要的或可能与Prettier冲突的ESLint规则
+
