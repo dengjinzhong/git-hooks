@@ -93,3 +93,14 @@ module.exports = {
 3. 添加钩子脚本 `npx husky add .husky/commit-msg`, 并编辑运行脚本为： `npx commitlint --edit`
 
 #### [更多配置内容](https://github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md)
+
+#### 具体配置
+```js
+module.exports = {
+  extends: ["@commitlint/config-conventional"],
+  rules: {
+    "scope-empty": [2, 'never'],
+    "type-enum": [2, 'always', ['feat', 'fix', 'perf', 'refactor', 'docs', 'style', 'test', 'build', 'revert', 'ci', 'chore', 'release']]
+  }
+};
+```
